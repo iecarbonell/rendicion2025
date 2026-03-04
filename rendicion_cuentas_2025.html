@@ -1,0 +1,2725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendición de Cuentas 2025 - IE José María Carbonell</title>
+    <style>
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: linear-gradient(135deg, #0a1628 0%, #1a2d4a 50%, #0d1f3c 100%);
+          color: #ffffff;
+          line-height: 1.6;
+        }
+
+        .nav-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 1000;
+          background: rgba(10, 22, 40, 0.95);
+          backdrop-filter: blur(20px);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-content {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0.75rem 1.5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .nav-logo {
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: #ffd700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .nav-links {
+          display: flex;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .nav-link {
+          padding: 0.6rem 1.2rem;
+          border-radius: 25px;
+          font-size: 1.1rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          color: rgba(255, 255, 255, 0.8);
+          border: 1px solid transparent;
+        }
+
+        .nav-link:hover {
+          color: #ffffff;
+          background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link.active {
+          background: linear-gradient(135deg, #ffd700, #ff8c00);
+          color: #0a1628;
+          font-weight: 600;
+        }
+
+        .hero-section {
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 6rem 2rem 4rem;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .hero-section::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+          pointer-events: none;
+        }
+
+        .hero-badge {
+          display: inline-block;
+          padding: 0.85rem 2.5rem;
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 140, 0, 0.2));
+          border: 1px solid rgba(255, 215, 0, 0.3);
+          border-radius: 50px;
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #ffd700;
+          margin-bottom: 2rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+
+        .hero-title {
+          font-size: clamp(2.5rem, 6vw, 4.5rem);
+          font-weight: 800;
+          margin-bottom: 1rem;
+          background: linear-gradient(135deg, #ffffff 0%, #ffd700 50%, #ff8c00 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-shadow: 0 0 60px rgba(255, 215, 0, 0.3);
+        }
+
+        .hero-subtitle {
+          font-size: clamp(1.2rem, 3vw, 1.8rem);
+          color: rgba(255, 255, 255, 0.9);
+          margin-bottom: 0.5rem;
+        }
+
+        .hero-info {
+          font-size: 1.25rem;
+          color: rgba(255, 255, 255, 0.7);
+          margin-bottom: 3rem;
+        }
+
+        .hero-stats {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 1.5rem;
+          max-width: 800px;
+          margin-top: 2rem;
+        }
+
+        .stat-card {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 20px;
+          padding: 1.5rem;
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-number {
+          font-size: 2.5rem;
+          font-weight: 800;
+          color: #ffd700;
+          margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+          font-size: 1.05rem;
+          color: rgba(255, 255, 255, 0.7);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .section {
+          padding: 5rem 2rem;
+          position: relative;
+        }
+
+        .section-header {
+          text-align: center;
+          margin-bottom: 4rem;
+        }
+
+        .section-icon {
+          width: 80px;
+          height: 80px;
+          margin: 0 auto 1.5rem;
+          background: linear-gradient(135deg, #ffd700, #ff8c00);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2.5rem;
+          box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .section-title {
+          font-size: clamp(2rem, 4vw, 3rem);
+          font-weight: 800;
+          margin-bottom: 1rem;
+          background: linear-gradient(135deg, #ffffff, #ffd700);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .section-subtitle {
+          font-size: 1.35rem;
+          color: rgba(255, 255, 255, 0.7);
+          max-width: 600px;
+          margin: 0 auto;
+        }
+
+        .content-grid {
+          max-width: 1400px;
+          margin: 0 auto;
+          display: grid;
+          gap: 2rem;
+        }
+
+        .card {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 24px;
+          padding: 2rem;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-title {
+          font-size: 1.3rem;
+          font-weight: 700;
+          margin-bottom: 1.5rem;
+          color: #ffd700;
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+        }
+
+        .card-title::before {
+          content: '';
+          width: 4px;
+          height: 24px;
+          background: linear-gradient(180deg, #ffd700, #ff8c00);
+          border-radius: 2px;
+        }
+
+        .table-container {
+          overflow-x: auto;
+          margin: 1rem 0;
+          border-radius: 16px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          font-size: 1.1rem;
+        }
+
+        th {
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 140, 0, 0.2));
+          color: #ffd700;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          padding: 1rem;
+          text-align: left;
+          white-space: nowrap;
+        }
+
+        td {
+          padding: 1rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+          color: rgba(255, 255, 255, 0.9);
+        }
+
+        tr:hover td {
+          background: rgba(255, 215, 0, 0.05);
+        }
+
+        tr:last-child td {
+          border-bottom: none;
+        }
+
+        .progress-bar {
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 10px;
+          height: 24px;
+          overflow: hidden;
+          position: relative;
+          margin: 0.5rem 0;
+        }
+
+        .progress-fill {
+          height: 100%;
+          background: linear-gradient(90deg, #ffd700, #ff8c00);
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding-right: 10px;
+          font-size: 0.75rem;
+          font-weight: 700;
+          color: #0a1628;
+          transition: width 1s ease;
+        }
+
+        .badge {
+          display: inline-block;
+          padding: 0.35rem 1rem;
+          border-radius: 20px;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+
+        .badge-success {
+          background: linear-gradient(135deg, #10b981, #059669);
+          color: white;
+        }
+
+        .badge-warning {
+          background: linear-gradient(135deg, #f59e0b, #d97706);
+          color: white;
+        }
+
+        .badge-info {
+          background: linear-gradient(135deg, #3b82f6, #2563eb);
+          color: white;
+        }
+
+        .highlight-box {
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.05));
+          border: 1px solid rgba(255, 215, 0, 0.2);
+          border-radius: 16px;
+          padding: 1.5rem;
+          margin: 1rem 0;
+        }
+
+        .highlight-box h4 {
+          color: #ffd700;
+          margin-bottom: 1rem;
+          font-size: 1.1rem;
+        }
+
+        .list-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.75rem;
+          margin-bottom: 0.75rem;
+          padding: 0.5rem;
+          border-radius: 8px;
+          transition: background 0.2s ease;
+        }
+
+        .list-item:hover {
+          background: rgba(255, 255, 255, 0.05);
+        }
+
+        .list-icon {
+          color: #ffd700;
+          font-size: 1.4rem;
+          margin-top: 0.1rem;
+        }
+
+        .grid-2 {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .grid-3 {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .grid-4 {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .footer {
+          background: rgba(0, 0, 0, 0.3);
+          padding: 3rem 2rem;
+          text-align: center;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-logo {
+          font-size: 1.8rem;
+          font-weight: 800;
+          color: #ffd700;
+          margin-bottom: 1rem;
+        }
+
+        .footer-text {
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 1.1rem;
+        }
+
+        .print-button-container {
+          position: fixed;
+          bottom: 2rem;
+          right: 2rem;
+          z-index: 1000;
+        }
+
+        .print-button {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          padding: 1rem 2rem;
+          background: linear-gradient(135deg, #ffd700, #ff8c00);
+          color: #0a1628;
+          border: none;
+          border-radius: 50px;
+          font-size: 1.1rem;
+          font-weight: 700;
+          cursor: pointer;
+          box-shadow: 0 10px 40px rgba(255, 215, 0, 0.4);
+          transition: all 0.3s ease;
+        }
+
+        .print-button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 15px 50px rgba(255, 215, 0, 0.5);
+        }
+
+        .print-button-icon {
+          font-size: 1.4rem;
+        }
+
+        @media print {
+          * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+
+          .nav-container, .print-button-container, .scroll-indicator { display: none !important; }
+
+          body {
+            background: linear-gradient(135deg, #0a1628 0%, #1a2d4a 50%, #0d1f3c 100%) !important;
+            color: #ffffff !important;
+            font-size: 11pt !important;
+            line-height: 1.4 !important;
+          }
+
+          .hero-section {
+            background: linear-gradient(135deg, #0a1628 0%, #1a2d4a 100%) !important;
+            color: white !important;
+            min-height: 100vh !important;
+            page-break-after: always !important;
+            padding-top: 2rem !important;
+          }
+
+          .hero-title {
+            color: #ffd700 !important;
+            -webkit-text-fill-color: #ffd700 !important;
+          }
+
+          .hero-subtitle, .hero-badge, .hero-info {
+            color: white !important;
+            -webkit-text-fill-color: white !important;
+          }
+
+          .stat-card {
+            background: rgba(255,255,255,0.1) !important;
+            border: 1px solid rgba(255,255,255,0.2) !important;
+            color: white !important;
+          }
+
+          .stat-number {
+            color: #ffd700 !important;
+          }
+
+          .stat-label {
+            color: rgba(255,255,255,0.8) !important;
+          }
+
+          .section {
+            page-break-before: always !important;
+            page-break-inside: auto !important;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2d4a 100%) !important;
+            padding: 1.5rem 1rem !important;
+          }
+
+          .section-header {
+            page-break-after: avoid !important;
+          }
+
+          .section-icon {
+            background: linear-gradient(135deg, #ffd700, #ff8c00) !important;
+            -webkit-print-color-adjust: exact !important;
+          }
+
+          .section-title {
+            color: #ffd700 !important;
+            -webkit-text-fill-color: #ffd700 !important;
+          }
+
+          .section-subtitle {
+            color: rgba(255,255,255,0.8) !important;
+          }
+
+          .card {
+            background: rgba(255,255,255,0.08) !important;
+            border: 1px solid rgba(255,255,255,0.15) !important;
+            page-break-inside: avoid !important;
+            margin-bottom: 1rem !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+          }
+
+          .card-title {
+            color: #ffd700 !important;
+          }
+
+          .highlight-box {
+            background: rgba(255,215,0,0.1) !important;
+            border: 1px solid rgba(255,215,0,0.3) !important;
+            page-break-inside: avoid !important;
+            color: white !important;
+          }
+
+          .highlight-box h4 {
+            color: #ffd700 !important;
+          }
+
+          .badge {
+            border: none !important;
+          }
+
+          .badge-success {
+            background: linear-gradient(135deg, #10b981, #059669) !important;
+            color: white !important;
+          }
+
+          .badge-warning {
+            background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+            color: white !important;
+          }
+
+          .badge-info {
+            background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+            color: white !important;
+          }
+
+          .progress-bar {
+            background: rgba(255,255,255,0.1) !important;
+            border: none !important;
+          }
+
+          .progress-fill {
+            background: linear-gradient(90deg, #ffd700, #ff8c00) !important;
+            color: #0a1628 !important;
+            font-weight: 700 !important;
+          }
+
+          .list-item {
+            color: rgba(255,255,255,0.9) !important;
+          }
+
+          .list-icon {
+            color: #ffd700 !important;
+          }
+
+          .achievement-item {
+            background: rgba(255,255,255,0.05) !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            page-break-inside: avoid !important;
+          }
+
+          .achievement-text {
+            color: rgba(255,255,255,0.9) !important;
+          }
+
+          table {
+            border: 1px solid rgba(255,255,255,0.2) !important;
+          }
+
+          th {
+            background: rgba(255,215,0,0.2) !important;
+            color: #ffd700 !important;
+            -webkit-print-color-adjust: exact !important;
+          }
+
+          td {
+            border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+            color: rgba(255,255,255,0.9) !important;
+          }
+
+          .amount {
+            color: #10b981 !important;
+          }
+
+          .total-row td {
+            background: rgba(255,215,0,0.2) !important;
+            color: #ffd700 !important;
+            font-weight: 700 !important;
+          }
+
+          .footer {
+            background: rgba(0,0,0,0.5) !important;
+            color: white !important;
+            page-break-before: always !important;
+          }
+
+          .footer-logo {
+            color: #ffd700 !important;
+          }
+
+          .footer-text {
+            color: rgba(255,255,255,0.7) !important;
+          }
+
+          p, span, div {
+            color: rgba(255,255,255,0.9) !important;
+          }
+
+          strong {
+            color: #ffd700 !important;
+          }
+
+          @page {
+            size: letter;
+            margin: 1.5cm;
+          }
+        }
+
+        .scroll-indicator {
+          position: absolute;
+          bottom: 2rem;
+          left: 50%;
+          transform: translateX(-50%);
+          animation: bounce 2s infinite;
+          cursor: pointer;
+        }
+
+        @keyframes bounce {
+          0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+          40% { transform: translateX(-50%) translateY(-10px); }
+          60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .scroll-arrow {
+          width: 30px;
+          height: 30px;
+          border-right: 3px solid #ffd700;
+          border-bottom: 3px solid #ffd700;
+          transform: rotate(45deg);
+        }
+
+        .amount {
+          font-family: 'Courier New', monospace;
+          font-weight: 700;
+          color: #10b981;
+        }
+
+        .total-row td {
+          background: rgba(255, 215, 0, 0.1);
+          font-weight: 700;
+          color: #ffd700;
+        }
+
+        @media (max-width: 768px) {
+          .nav-links {
+            display: none;
+          }
+
+          .nav-logo {
+            font-size: 0.8rem;
+          }
+
+          .section {
+            padding: 3rem 1rem;
+          }
+
+          .card {
+            padding: 1.5rem;
+          }
+
+          th, td {
+            padding: 0.75rem 0.5rem;
+            font-size: 0.8rem;
+          }
+
+          .hero-stats {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        .animate-on-scroll {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .tab-container {
+          display: flex;
+          gap: 0.5rem;
+          margin-bottom: 1.5rem;
+          flex-wrap: wrap;
+        }
+
+        .tab-btn {
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: white;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-size: 0.85rem;
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+          background: linear-gradient(135deg, #ffd700, #ff8c00);
+          color: #0a1628;
+        }
+
+        .achievement-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1rem;
+        }
+
+        .achievement-item {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          padding: 1rem;
+          text-align: center;
+          transition: transform 0.3s ease;
+        }
+
+        .achievement-item:hover {
+          transform: scale(1.02);
+        }
+
+        .achievement-icon {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .achievement-text {
+          font-size: 1.1rem;
+          color: rgba(255, 255, 255, 0.8);
+        }
+      
+    </style>
+</head>
+<body>
+> window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  return (
+    <>
+      <style jsx global>{`
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: linear-gradient(135deg, #0a1628 0%, #1a2d4a 50%, #0d1f3c 100%);
+          color: #ffffff;
+          line-height: 1.6;
+        }
+
+        .nav-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 1000;
+          background: rgba(10, 22, 40, 0.95);
+          backdrop-filter: blur(20px);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-content {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0.75rem 1.5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .nav-logo {
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: #ffd700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .nav-links {
+          display: flex;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .nav-link {
+          padding: 0.6rem 1.2rem;
+          border-radius: 25px;
+          font-size: 1.1rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          color: rgba(255, 255, 255, 0.8);
+          border: 1px solid transparent;
+        }
+
+        .nav-link:hover {
+          color: #ffffff;
+          background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link.active {
+          background: linear-gradient(135deg, #ffd700, #ff8c00);
+          color: #0a1628;
+          font-weight: 600;
+        }
+
+        .hero-section {
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 6rem 2rem 4rem;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .hero-section::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+          pointer-events: none;
+        }
+
+        .hero-badge {
+          display: inline-block;
+          padding: 0.85rem 2.5rem;
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 140, 0, 0.2));
+          border: 1px solid rgba(255, 215, 0, 0.3);
+          border-radius: 50px;
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #ffd700;
+          margin-bottom: 2rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+
+        .hero-title {
+          font-size: clamp(2.5rem, 6vw, 4.5rem);
+          font-weight: 800;
+          margin-bottom: 1rem;
+          background: linear-gradient(135deg, #ffffff 0%, #ffd700 50%, #ff8c00 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-shadow: 0 0 60px rgba(255, 215, 0, 0.3);
+        }
+
+        .hero-subtitle {
+          font-size: clamp(1.2rem, 3vw, 1.8rem);
+          color: rgba(255, 255, 255, 0.9);
+          margin-bottom: 0.5rem;
+        }
+
+        .hero-info {
+          font-size: 1.25rem;
+          color: rgba(255, 255, 255, 0.7);
+          margin-bottom: 3rem;
+        }
+
+        .hero-stats {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 1.5rem;
+          max-width: 800px;
+          margin-top: 2rem;
+        }
+
+        .stat-card {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 20px;
+          padding: 1.5rem;
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-number {
+          font-size: 2.5rem;
+          font-weight: 800;
+          color: #ffd700;
+          margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+          font-size: 1.05rem;
+          color: rgba(255, 255, 255, 0.7);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .section {
+          padding: 5rem 2rem;
+          position: relative;
+        }
+
+        .section-header {
+          text-align: center;
+          margin-bottom: 4rem;
+        }
+
+        .section-icon {
+          width: 80px;
+          height: 80px;
+          margin: 0 auto 1.5rem;
+          background: linear-gradient(135deg, #ffd700, #ff8c00);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2.5rem;
+          box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .section-title {
+          font-size: clamp(2rem, 4vw, 3rem);
+          font-weight: 800;
+          margin-bottom: 1rem;
+          background: linear-gradient(135deg, #ffffff, #ffd700);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .section-subtitle {
+          font-size: 1.35rem;
+          color: rgba(255, 255, 255, 0.7);
+          max-width: 600px;
+          margin: 0 auto;
+        }
+
+        .content-grid {
+          max-width: 1400px;
+          margin: 0 auto;
+          display: grid;
+          gap: 2rem;
+        }
+
+        .card {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 24px;
+          padding: 2rem;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-title {
+          font-size: 1.3rem;
+          font-weight: 700;
+          margin-bottom: 1.5rem;
+          color: #ffd700;
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+        }
+
+        .card-title::before {
+          content: '';
+          width: 4px;
+          height: 24px;
+          background: linear-gradient(180deg, #ffd700, #ff8c00);
+          border-radius: 2px;
+        }
+
+        .table-container {
+          overflow-x: auto;
+          margin: 1rem 0;
+          border-radius: 16px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          font-size: 1.1rem;
+        }
+
+        th {
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 140, 0, 0.2));
+          color: #ffd700;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          padding: 1rem;
+          text-align: left;
+          white-space: nowrap;
+        }
+
+        td {
+          padding: 1rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+          color: rgba(255, 255, 255, 0.9);
+        }
+
+        tr:hover td {
+          background: rgba(255, 215, 0, 0.05);
+        }
+
+        tr:last-child td {
+          border-bottom: none;
+        }
+
+        .progress-bar {
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 10px;
+          height: 24px;
+          overflow: hidden;
+          position: relative;
+          margin: 0.5rem 0;
+        }
+
+        .progress-fill {
+          height: 100%;
+          background: linear-gradient(90deg, #ffd700, #ff8c00);
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding-right: 10px;
+          font-size: 0.75rem;
+          font-weight: 700;
+          color: #0a1628;
+          transition: width 1s ease;
+        }
+
+        .badge {
+          display: inline-block;
+          padding: 0.35rem 1rem;
+          border-radius: 20px;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+
+        .badge-success {
+          background: linear-gradient(135deg, #10b981, #059669);
+          color: white;
+        }
+
+        .badge-warning {
+          background: linear-gradient(135deg, #f59e0b, #d97706);
+          color: white;
+        }
+
+        .badge-info {
+          background: linear-gradient(135deg, #3b82f6, #2563eb);
+          color: white;
+        }
+
+        .highlight-box {
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.05));
+          border: 1px solid rgba(255, 215, 0, 0.2);
+          border-radius: 16px;
+          padding: 1.5rem;
+          margin: 1rem 0;
+        }
+
+        .highlight-box h4 {
+          color: #ffd700;
+          margin-bottom: 1rem;
+          font-size: 1.1rem;
+        }
+
+        .list-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.75rem;
+          margin-bottom: 0.75rem;
+          padding: 0.5rem;
+          border-radius: 8px;
+          transition: background 0.2s ease;
+        }
+
+        .list-item:hover {
+          background: rgba(255, 255, 255, 0.05);
+        }
+
+        .list-icon {
+          color: #ffd700;
+          font-size: 1.4rem;
+          margin-top: 0.1rem;
+        }
+
+        .grid-2 {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .grid-3 {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .grid-4 {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .footer {
+          background: rgba(0, 0, 0, 0.3);
+          padding: 3rem 2rem;
+          text-align: center;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-logo {
+          font-size: 1.8rem;
+          font-weight: 800;
+          color: #ffd700;
+          margin-bottom: 1rem;
+        }
+
+        .footer-text {
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 1.1rem;
+        }
+
+        .print-button-container {
+          position: fixed;
+          bottom: 2rem;
+          right: 2rem;
+          z-index: 1000;
+        }
+
+        .print-button {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          padding: 1rem 2rem;
+          background: linear-gradient(135deg, #ffd700, #ff8c00);
+          color: #0a1628;
+          border: none;
+          border-radius: 50px;
+          font-size: 1.1rem;
+          font-weight: 700;
+          cursor: pointer;
+          box-shadow: 0 10px 40px rgba(255, 215, 0, 0.4);
+          transition: all 0.3s ease;
+        }
+
+        .print-button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 15px 50px rgba(255, 215, 0, 0.5);
+        }
+
+        .print-button-icon {
+          font-size: 1.4rem;
+        }
+
+        @media print {
+          * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+
+          .nav-container, .print-button-container, .scroll-indicator { display: none !important; }
+
+          body {
+            background: linear-gradient(135deg, #0a1628 0%, #1a2d4a 50%, #0d1f3c 100%) !important;
+            color: #ffffff !important;
+            font-size: 11pt !important;
+            line-height: 1.4 !important;
+          }
+
+          .hero-section {
+            background: linear-gradient(135deg, #0a1628 0%, #1a2d4a 100%) !important;
+            color: white !important;
+            min-height: 100vh !important;
+            page-break-after: always !important;
+            padding-top: 2rem !important;
+          }
+
+          .hero-title {
+            color: #ffd700 !important;
+            -webkit-text-fill-color: #ffd700 !important;
+          }
+
+          .hero-subtitle, .hero-badge, .hero-info {
+            color: white !important;
+            -webkit-text-fill-color: white !important;
+          }
+
+          .stat-card {
+            background: rgba(255,255,255,0.1) !important;
+            border: 1px solid rgba(255,255,255,0.2) !important;
+            color: white !important;
+          }
+
+          .stat-number {
+            color: #ffd700 !important;
+          }
+
+          .stat-label {
+            color: rgba(255,255,255,0.8) !important;
+          }
+
+          .section {
+            page-break-before: always !important;
+            page-break-inside: auto !important;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2d4a 100%) !important;
+            padding: 1.5rem 1rem !important;
+          }
+
+          .section-header {
+            page-break-after: avoid !important;
+          }
+
+          .section-icon {
+            background: linear-gradient(135deg, #ffd700, #ff8c00) !important;
+            -webkit-print-color-adjust: exact !important;
+          }
+
+          .section-title {
+            color: #ffd700 !important;
+            -webkit-text-fill-color: #ffd700 !important;
+          }
+
+          .section-subtitle {
+            color: rgba(255,255,255,0.8) !important;
+          }
+
+          .card {
+            background: rgba(255,255,255,0.08) !important;
+            border: 1px solid rgba(255,255,255,0.15) !important;
+            page-break-inside: avoid !important;
+            margin-bottom: 1rem !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+          }
+
+          .card-title {
+            color: #ffd700 !important;
+          }
+
+          .highlight-box {
+            background: rgba(255,215,0,0.1) !important;
+            border: 1px solid rgba(255,215,0,0.3) !important;
+            page-break-inside: avoid !important;
+            color: white !important;
+          }
+
+          .highlight-box h4 {
+            color: #ffd700 !important;
+          }
+
+          .badge {
+            border: none !important;
+          }
+
+          .badge-success {
+            background: linear-gradient(135deg, #10b981, #059669) !important;
+            color: white !important;
+          }
+
+          .badge-warning {
+            background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+            color: white !important;
+          }
+
+          .badge-info {
+            background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+            color: white !important;
+          }
+
+          .progress-bar {
+            background: rgba(255,255,255,0.1) !important;
+            border: none !important;
+          }
+
+          .progress-fill {
+            background: linear-gradient(90deg, #ffd700, #ff8c00) !important;
+            color: #0a1628 !important;
+            font-weight: 700 !important;
+          }
+
+          .list-item {
+            color: rgba(255,255,255,0.9) !important;
+          }
+
+          .list-icon {
+            color: #ffd700 !important;
+          }
+
+          .achievement-item {
+            background: rgba(255,255,255,0.05) !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            page-break-inside: avoid !important;
+          }
+
+          .achievement-text {
+            color: rgba(255,255,255,0.9) !important;
+          }
+
+          table {
+            border: 1px solid rgba(255,255,255,0.2) !important;
+          }
+
+          th {
+            background: rgba(255,215,0,0.2) !important;
+            color: #ffd700 !important;
+            -webkit-print-color-adjust: exact !important;
+          }
+
+          td {
+            border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+            color: rgba(255,255,255,0.9) !important;
+          }
+
+          .amount {
+            color: #10b981 !important;
+          }
+
+          .total-row td {
+            background: rgba(255,215,0,0.2) !important;
+            color: #ffd700 !important;
+            font-weight: 700 !important;
+          }
+
+          .footer {
+            background: rgba(0,0,0,0.5) !important;
+            color: white !important;
+            page-break-before: always !important;
+          }
+
+          .footer-logo {
+            color: #ffd700 !important;
+          }
+
+          .footer-text {
+            color: rgba(255,255,255,0.7) !important;
+          }
+
+          p, span, div {
+            color: rgba(255,255,255,0.9) !important;
+          }
+
+          strong {
+            color: #ffd700 !important;
+          }
+
+          @page {
+            size: letter;
+            margin: 1.5cm;
+          }
+        }
+
+        .scroll-indicator {
+          position: absolute;
+          bottom: 2rem;
+          left: 50%;
+          transform: translateX(-50%);
+          animation: bounce 2s infinite;
+          cursor: pointer;
+        }
+
+        @keyframes bounce {
+          0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+          40% { transform: translateX(-50%) translateY(-10px); }
+          60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .scroll-arrow {
+          width: 30px;
+          height: 30px;
+          border-right: 3px solid #ffd700;
+          border-bottom: 3px solid #ffd700;
+          transform: rotate(45deg);
+        }
+
+        .amount {
+          font-family: 'Courier New', monospace;
+          font-weight: 700;
+          color: #10b981;
+        }
+
+        .total-row td {
+          background: rgba(255, 215, 0, 0.1);
+          font-weight: 700;
+          color: #ffd700;
+        }
+
+        @media (max-width: 768px) {
+          .nav-links {
+            display: none;
+          }
+
+          .nav-logo {
+            font-size: 0.8rem;
+          }
+
+          .section {
+            padding: 3rem 1rem;
+          }
+
+          .card {
+            padding: 1.5rem;
+          }
+
+          th, td {
+            padding: 0.75rem 0.5rem;
+            font-size: 0.8rem;
+          }
+
+          .hero-stats {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        .animate-on-scroll {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .tab-container {
+          display: flex;
+          gap: 0.5rem;
+          margin-bottom: 1.5rem;
+          flex-wrap: wrap;
+        }
+
+        .tab-btn {
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: white;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-size: 0.85rem;
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+          background: linear-gradient(135deg, #ffd700, #ff8c00);
+          color: #0a1628;
+        }
+
+        .achievement-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1rem;
+        }
+
+        .achievement-item {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          padding: 1rem;
+          text-align: center;
+          transition: transform 0.3s ease;
+        }
+
+        .achievement-item:hover {
+          transform: scale(1.02);
+        }
+
+        .achievement-icon {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .achievement-text {
+          font-size: 1.1rem;
+          color: rgba(255, 255, 255, 0.8);
+        }
+      `}</style>
+
+      <!-- Navigation -->
+      <nav class="nav-container">
+        <div class="nav-content">
+          <div class="nav-logo">IE José María Carbonell</div>
+          <div class="nav-links">
+            <span class="nav-link" data-section="portada">Inicio</span>
+            <span class="nav-link" data-section="directiva">Directiva</span>
+            <span class="nav-link" data-section="academica">Académica</span>
+            <span class="nav-link" data-section="comunitaria">Comunitaria</span>
+            <span class="nav-link" data-section="administrativa">Administrativa</span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section id="portada" class="hero-section">
+        <span class="hero-badge">Vigencia 2025</span>
+        <h1 class="hero-title">RENDICIÓN DE CUENTAS</h1>
+        <h2 class="hero-subtitle">Institución Educativa José María Carbonell</h2>
+        <p class="hero-info">Rector: César Augusto Estrada Herrera | San Antonio, Tolima</p>
+
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-number">346</div>
+            <div class="stat-label">Actuaciones Oficiales</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Gestiones</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">16</div>
+            <div class="stat-label">Sesiones Consejo Directivo</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">$286M</div>
+            <div class="stat-label">Total Ingresos</div>
+          </div>
+        </div>
+
+        <div class="scroll-indicator" >
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+
+      <!-- Gestión Directiva -->
+      <section id="directiva" class="section" style="background: linear-gradient(180deg, rgba(10, 22, 40, 0) 0%, rgba(30, 58, 95, 0.3) 100%)">
+        <div class="section-header">
+          <div class="section-icon">🏛️</div>
+          <h2 class="section-title">GESTIÓN DIRECTIVA</h2>
+          <p class="section-subtitle">Liderazgo, control institucional y defensa jurídica</p>
+        </div>
+
+        <div class="content-grid">
+          <!-- Resultados Generales -->
+          <div class="card">
+            <h3 class="card-title">Resultados Generales de Gestión 2025</h3>
+            <div class="grid-4">
+              <div class="achievement-item">
+                <div class="achievement-icon">📋</div>
+                <div class="achievement-text"><strong>99</strong> oficios Gestión Directiva</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">📚</div>
+                <div class="achievement-text"><strong>83</strong> oficios Gestión Académica</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">💰</div>
+                <div class="achievement-text"><strong>50</strong> oficios Gestión Administrativa</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">👥</div>
+                <div class="achievement-text"><strong>16</strong> oficios Gestión Comunitaria</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resumen Ejecutivo -->
+          <div class="card">
+            <h3 class="card-title">Resumen Ejecutivo</h3>
+            <div class="grid-2">
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>16 sesiones del Consejo Directivo (ordinarias y extraordinarias)</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>Respuesta a derechos de petición y recursos de reposición</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>Seguimiento permanente a metas del PMI</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>Fortalecimiento del Consejo de Padres</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>Implementación estrategia EXA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Autoevaluación -->
+          <div class="card">
+            <h3 class="card-title">Resultados Autoevaluación Institucional 2025</h3>
+
+            <!-- Resumen General -->
+            <div class="highlight-box" style="text-align: center; margin-bottom: 2rem">
+              <p style="font-size: 1.1rem; margin-bottom: 0.5rem">Puntaje Promedio General</p>
+              <p style="font-size: 3.5rem; font-weight: 800; color: #ffd700">3.19/4</p>
+              <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.7)">Equivalente al <strong>79.75%</strong> de desarrollo institucional</p>
+            </div>
+
+            <!-- Puntajes por Área -->
+            <h4 style="color: #ffd700; margin-bottom: 1rem; font-size: 1.3rem">📊 Puntaje por Gestión Institucional</h4>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Gestión</th>
+                    <th>Calificación</th>
+                    <th>Nivel</th>
+                    <th>Progreso</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Gestión Administrativa y Financiera</strong></td>
+                    <td style="font-size: 1.3rem; font-weight: 700; color: #10b981">3.55/4</td>
+                    <td><span class="badge badge-success">Alto</span></td>
+                    <td>
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 88.75%; background: linear-gradient(90deg, #10b981, #059669)">88.75%</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Gestión Académica</strong></td>
+                    <td style="font-size: 1.3rem; font-weight: 700; color: #10b981">3.50/4</td>
+                    <td><span class="badge badge-success">Alto</span></td>
+                    <td>
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 87.5%; background: linear-gradient(90deg, #10b981, #059669)">87.5%</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Gestión Directiva</strong></td>
+                    <td style="font-size: 1.3rem; font-weight: 700; color: #ffd700">3.30/4</td>
+                    <td><span class="badge badge-warning">Medio Alto</span></td>
+                    <td>
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 82.5%">82.5%</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Gestión Comunitaria</strong></td>
+                    <td style="font-size: 1.3rem; font-weight: 700; color: #ffd700">3.00/4</td>
+                    <td><span class="badge badge-warning">Medio Alto</span></td>
+                    <td>
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%">75%</div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Fortalezas y Aspectos a Mejorar -->
+            <div class="grid-2" style="margin-top: 2rem">
+              <div class="highlight-box" style="border-color: rgba(16, 185, 129, 0.4); background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05))">
+                <h4 style="color: #10b981">🏆 FORTALEZAS IDENTIFICADAS</h4>
+                <div style="margin-top: 1rem">
+                  <div class="list-item"><span class="list-icon" style="color: #10b981">★</span><span><strong>Rectoría:</strong> 4/5 (80%) - Excelente liderazgo</span></div>
+                  <div class="list-item"><span class="list-icon" style="color: #10b981">★</span><span><strong>Consejo Directivo:</strong> 4/5 (80%) - Buena gobernanza</span></div>
+                  <div class="list-item"><span class="list-icon" style="color: #10b981">★</span><span><strong>Metas Institucionales:</strong> 4/5 (80%) - Claridad en objetivos</span></div>
+                  <div class="list-item"><span class="list-icon" style="color: #10b981">★</span><span><strong>Comité de Convivencia:</strong> 4/5 (80%) - Gestión efectiva</span></div>
+                </div>
+              </div>
+              <div class="highlight-box" style="border-color: rgba(239, 68, 68, 0.4); background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(239, 68, 68, 0.05))">
+                <h4 style="color: #ef4444">⚠️ ASPECTOS A MEJORAR</h4>
+                <div style="margin-top: 1rem">
+                  <div class="list-item"><span class="list-icon" style="color: #ef4444">!</span><span><strong>Consejo de Estudiantes:</strong> 2/5 (40%) - Requiere fortalecimiento</span></div>
+                  <div class="list-item"><span class="list-icon" style="color: #ef4444">!</span><span>Baja participación estudiantil en decisiones institucionales</span></div>
+                  <div class="list-item"><span class="list-icon" style="color: #ef4444">!</span><span>Necesidad de mayor empoderamiento del gobierno estudiantil</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Análisis -->
+            <div class="highlight-box" style="margin-top: 2rem; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05)); border-color: rgba(59, 130, 246, 0.3)">
+              <h4 style="color: #3b82f6">📈 Análisis de Resultados</h4>
+              <p style="margin-top: 0.5rem; line-height: 1.8; font-size: 1.15rem">
+                La institución se ubica en un nivel <strong>ALTO</strong> de desarrollo con un puntaje promedio de <strong>3.19/4 (79.75%)</strong>. 
+                Las áreas con mejor desempeño son <strong>Gestión Administrativa y Financiera (3.55/4)</strong> y <strong>Gestión Académica (3.50/4)</strong>.
+                La <strong>Gestión Comunitaria (3.0/4)</strong> requiere mayor fortalecimiento, especialmente en la participación activa del Consejo de Estudiantes.
+                Se recomienda para 2026 implementar estrategias de liderazgo estudiantil y mayor participación en la toma de decisiones.
+              </p>
+            </div>
+          </div>
+
+          <!-- Metas PMI -->
+          <div class="card">
+            <h3 class="card-title">Metas PMI - Gestión Directiva</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Meta</th>
+                    <th>Ejecución</th>
+                    <th>Observaciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Atención diferenciada al 100% de estudiantes con capacidades disimiles mediante DUA y PIAR</td>
+                    <td><span class="badge badge-warning">75%</span></td>
+                    <td>26 NNJA caracterizados con barreras de aprendizaje, 12 con diagnóstico. Se implementan PIAR liderados por Docente Orientadora.</td>
+                  </tr>
+                  <tr>
+                    <td>Conformación Consejo Estudiantil, elección de Personero, Contralor y Gestor Ambiental</td>
+                    <td><span class="badge badge-success">100%</span></td>
+                    <td>Se realizó elección dentro de tiempos establecidos por Ley. Personero: Pedro Julián Angarita, Contralora: Luz Dary Galvis, Gestor Ambiental: Deicy Garzón.</td>
+                  </tr>
+                  <tr>
+                    <td>Participación activa del 100% de docentes en Comunidades de Aprendizaje (CDA)</td>
+                    <td><span class="badge badge-success">100%</span></td>
+                    <td>Se conformaron CDA, se asignaron planeaciones y se estableció plataforma Teams. 92% de docentes realizando planeación de actividades de aula.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Gobierno Escolar -->
+          <div class="card">
+            <h3 class="card-title">Gobierno Escolar 2025</h3>
+            <div class="grid-3">
+              <div class="achievement-item">
+                <div class="achievement-icon">👔</div>
+                <div class="achievement-text"><strong>Personero:</strong><br/>Brayan Stiven Giraldo Motta</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">📊</div>
+                <div class="achievement-text"><strong>Contralora:</strong><br/>Gabriela Rodríguez Restrepo</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">🌱</div>
+                <div class="achievement-text"><strong>Gestor Ambiental:</strong><br/>Ronal Andrés Ortiz Méndez</div>
+              </div>
+            </div>
+            <div style="margin-top: 1.5rem">
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>Consejo Estudiantil conformado según Ley</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>Consejo Directivo: 16 sesiones realizadas</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>Consejo de Padres fortalecido</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>Comité de Convivencia Laboral legalizado</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>Sistema de seguridad y salud en el trabajo, comité COPASST y brigadas por sede</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>PGIRE: Plan de Gestión Integral del Riesgo Escolar creado</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foro Educativo -->
+          <div class="card">
+            <h3 class="card-title">Foro Educativo Institucional 2025</h3>
+            <div class="highlight-box">
+              <p><strong>Evento liderado por la Rectoría</strong></p>
+              <p style="margin-top: 0.5rem">Participación interinstitucional: IE Domingo Savio, IE San José del Tetuán, IE José María Carbonell</p>
+              <p style="margin-top: 0.5rem">Integración interinstitucional y reflexión pedagógica municipal</p>
+            </div>
+            <div class="grid-2" style="margin-top: 1.5rem">
+              <div class="highlight-box">
+                <h4>👨‍👩‍👧‍👦 ASOPADCAR - Asociación de Padres</h4>
+                <div class="list-item"><span class="list-icon">✓</span><span>Colaboración con aguas y café para el Foro Educativo</span></div>
+                <div class="list-item"><span class="list-icon">✓</span><span>Gestión de <strong>uniformes nuevos y completos</strong> para niños de las sedes Poleo, Jesús María y El Campo</span></div>
+                <div class="list-item"><span class="list-icon">👕</span><span><strong>7 uniformes completos</strong> (diario y sudadera, con chaquetas, tenis y zapatos NUEVOS)</span></div>
+              </div>
+              <div class="highlight-box">
+                <h4>🏛️ Alcaldía Municipal</h4>
+                <div class="list-item"><span class="list-icon">✓</span><span>Vinculación al Foro Educativo Institucional</span></div>
+                <div class="list-item"><span class="list-icon">🥪</span><span>Apoyo logístico con refrigerios para el evento</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Logros -->
+          <div class="card">
+            <h3 class="card-title">Logros Alcanzados</h3>
+            <div class="achievement-grid">
+              <div class="achievement-item"><span class="achievement-icon">📋</span><span class="achievement-text">346 actuaciones oficiales documentadas</span></div>
+              <div class="achievement-item"><span class="achievement-icon">🏛️</span><span class="achievement-text">16 sesiones del Consejo Directivo</span></div>
+              <div class="achievement-item"><span class="achievement-icon">🏗️</span><span class="achievement-text">Gestión activa de infraestructura rural</span></div>
+              <div class="achievement-item"><span class="achievement-icon">⚖️</span><span class="achievement-text">Protección jurídica institucional</span></div>
+              <div class="achievement-item"><span class="achievement-icon">🤝</span><span class="achievement-text">Articulación territorial interinstitucional</span></div>
+              <div class="achievement-item"><span class="achievement-icon">👥</span><span class="achievement-text">Gobierno Escolar completo y operativo</span></div>
+              <div class="achievement-item"><span class="achievement-icon">✅</span><span class="achievement-text">Estamentos estudiantiles conformados (100%)</span></div>
+              <div class="achievement-item"><span class="achievement-icon">🧒</span><span class="achievement-text">27 NNJA atendidos con PIAR</span></div>
+              <div class="achievement-item"><span class="achievement-icon">📖</span><span class="achievement-text">Comunidades de aprendizaje implementadas</span></div>
+              <div class="achievement-item"><span class="achievement-icon">🎓</span><span class="achievement-text">Articulación técnica con SENA</span></div>
+              <div class="achievement-item"><span class="achievement-icon">🎤</span><span class="achievement-text">Foro Educativo Municipal liderado</span></div>
+              <div class="achievement-item"><span class="achievement-icon">📑</span><span class="achievement-text">Manual de Convivencia y SIEE actualizado</span></div>
+            </div>
+            <div class="grid-2" style="margin-top: 2rem">
+              <div class="highlight-box" style="border-color: rgba(16, 185, 129, 0.4); background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05))">
+                <h4 style="color: #10b981">📝 18 Contratos Celebrados en 2025</h4>
+                <div class="grid-3" style="margin-top: 1rem">
+                  <div style="text-align: center">
+                    <p style="font-size: 1.8rem; font-weight: 700; color: #ffd700">6</p>
+                    <p style="font-size: 0.85rem">Prestación de Servicios</p>
+                  </div>
+                  <div style="text-align: center">
+                    <p style="font-size: 1.8rem; font-weight: 700; color: #ffd700">11</p>
+                    <p style="font-size: 0.85rem">Compraventa</p>
+                  </div>
+                  <div style="text-align: center">
+                    <p style="font-size: 1.8rem; font-weight: 700; color: #ffd700">1</p>
+                    <p style="font-size: 0.85rem">Obra</p>
+                  </div>
+                </div>
+              </div>
+              <div class="highlight-box" style="border-color: rgba(59, 130, 246, 0.4); background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05))">
+                <h4 style="color: #3b82f6">💰 Ejecución Presupuestal</h4>
+                <div style="text-align: center; margin-top: 1rem">
+                  <p style="font-size: 3rem; font-weight: 800; color: #ffd700">86%</p>
+                  <p style="font-size: 0.9rem; margin-top: 0.5rem">del presupuesto ejecutado</p>
+                  <div class="progress-bar" style="margin-top: 1rem; height: 30px">
+                    <div class="progress-fill" style="width: 86%; font-size: 0.9rem">86%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gestión Académica -->
+      <section id="academica" class="section" style="background: linear-gradient(180deg, rgba(30, 58, 95, 0.3) 0%, rgba(16, 95, 67, 0.2) 100%)">
+        <div class="section-header">
+          <div class="section-icon">📚</div>
+          <h2 class="section-title">GESTIÓN ACADÉMICA</h2>
+          <p class="section-subtitle">Calidad educativa y formación integral</p>
+        </div>
+
+        <div class="content-grid">
+          <!-- Indicadores de Eficiencia -->
+          <div class="card">
+            <h3 class="card-title">Indicadores de Eficiencia Interna 2025</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Indicador</th>
+                    <th>Porcentaje</th>
+                    <th>Progreso</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Total Estudiantes</td>
+                    <td><span class="badge badge-info">100%</span></td>
+                    <td><div class="progress-bar"><div class="progress-fill" style="width: 100%">100%</div></div></td>
+                  </tr>
+                  <tr>
+                    <td>Promovidos</td>
+                    <td><span class="badge badge-success">85.5%</span></td>
+                    <td><div class="progress-bar"><div class="progress-fill" style="width: 85.5%">85.5%</div></div></td>
+                  </tr>
+                  <tr>
+                    <td>Reprobados</td>
+                    <td><span class="badge badge-warning">5%</span></td>
+                    <td><div class="progress-bar"><div class="progress-fill" style="width: 5%; background: linear-gradient(90deg, #f59e0b, #d97706)">5%</div></div></td>
+                  </tr>
+                  <tr>
+                    <td>Desertores</td>
+                    <td><span class="badge badge-warning">5%</span></td>
+                    <td><div class="progress-bar"><div class="progress-fill" style="width: 5%; background: linear-gradient(90deg, #f59e0b, #d97706)">5%</div></div></td>
+                  </tr>
+                  <tr>
+                    <td>Retirados</td>
+                    <td><span class="badge badge-warning">4.5%</span></td>
+                    <td><div class="progress-bar"><div class="progress-fill" style="width: 4.5%; background: linear-gradient(90deg, #f59e0b, #d97706)">4.5%</div></div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Relación Estudiantes-Computadores -->
+          <div class="card">
+            <h3 class="card-title">Relación Estudiantes - Computadores</h3>
+            <div class="grid-4">
+              <div class="achievement-item">
+                <div class="achievement-icon">💻</div>
+                <div class="achievement-text"><strong>145</strong> Portátiles</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">🖥️</div>
+                <div class="achievement-text"><strong>2</strong> PC Escritorio</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">📱</div>
+                <div class="achievement-text"><strong>157</strong> Tablets</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">📽️</div>
+                <div class="achievement-text"><strong>24</strong> Video Beam</div>
+              </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 1rem">
+              <p><strong>Relación PC-Estudiantes:</strong> 10.17 estudiantes por PC (1476 estudiantes - 145 PC)</p>
+            </div>
+          </div>
+
+          <!-- Jornada y Modelos -->
+          <div class="grid-2">
+            <div class="card">
+              <h3 class="card-title">Jornada Académica</h3>
+              <div class="list-item">
+                <span class="list-icon">☀️</span>
+                <span>Jornada Mañana</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">📅</span>
+                <span>Jornada Fin de Semana: <strong>48 estudiantes</strong> matriculados</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Modelo Pedagógico</h3>
+              <div class="table-container">
+                <table>
+                  <thead>
+                    <tr><th>Nivel</th><th>Metodología</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Pre-escolar</td><td>MAS+</td></tr>
+                    <tr><td>Básica Urbana</td><td>Escuela Graduada</td></tr>
+                    <tr><td>Básica Primaria Rural</td><td>Escuela Nueva</td></tr>
+                    <tr><td>Básica Secundaria Rural</td><td>Postprimaria</td></tr>
+                    <tr><td>Media Urbana</td><td>Articulación SENA</td></tr>
+                    <tr><td>Media Rural</td><td>EMER</td></tr>
+                    <tr><td>Por Ciclos</td><td>SAT</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plan de Estudios -->
+          <div class="card">
+            <h3 class="card-title">Plan de Estudios - Primaria (25 horas)</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr><th>Área</th><th>1°</th><th>2°</th><th>3°</th><th>4°</th><th>5°</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Ciencias Naturales</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+                  <tr><td>Ciencias Sociales</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+                  <tr><td>Ética y Valores</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                  <tr><td>Educación Artística</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                  <tr><td>Educación Física</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                  <tr><td>Religión</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                  <tr><td>Lengua Castellana</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+                  <tr><td>Inglés</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                  <tr><td>Matemáticas</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+                  <tr><td>Tecnología</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                  <tr><td>Emprendimiento</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Plan de Estudios - Secundaria (30 horas)</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr><th>Área</th><th>6°</th><th>7°</th><th>8°</th><th>9°</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Ciencias Naturales</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+                  <tr><td>Ciencias Sociales</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+                  <tr><td>Ética y Valores</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                  <tr><td>Educación Artística</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                  <tr><td>Educación Física</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                  <tr><td>Religión</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                  <tr><td>Lengua Castellana</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+                  <tr><td>Inglés</td><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+                  <tr><td>Matemáticas</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+                  <tr><td>Tecnología</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+                  <tr><td>Emprendimiento</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Plan de Estudios - Media (30 horas)</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr><th>Área</th><th>10°</th><th>11°</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Física</td><td>2</td><td>2</td></tr>
+                  <tr><td>Química</td><td>2</td><td>2</td></tr>
+                  <tr><td>Biología</td><td>2</td><td>2</td></tr>
+                  <tr><td>Ciencias Sociales</td><td>3</td><td>3</td></tr>
+                  <tr><td>Ciencias Económicas</td><td>1</td><td>1</td></tr>
+                  <tr><td>Ciencias Políticas</td><td>1</td><td>1</td></tr>
+                  <tr><td>Filosofía</td><td>1</td><td>1</td></tr>
+                  <tr><td>Ética y Valores</td><td>1</td><td>1</td></tr>
+                  <tr><td>Educación Artística</td><td>1</td><td>1</td></tr>
+                  <tr><td>Educación Física</td><td>1</td><td>1</td></tr>
+                  <tr><td>Religión</td><td>1</td><td>1</td></tr>
+                  <tr><td>Lengua Castellana</td><td>4</td><td>4</td></tr>
+                  <tr><td>Inglés</td><td>3</td><td>3</td></tr>
+                  <tr><td>Matemáticas</td><td>4</td><td>4</td></tr>
+                  <tr><td>Tecnología</td><td>2</td><td>2</td></tr>
+                  <tr><td>Emprendimiento</td><td>1</td><td>1</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Proyectos Pedagógicos -->
+          <div class="card">
+            <h3 class="card-title">Proyectos Pedagógicos</h3>
+            <div class="grid-2">
+              <div class="highlight-box">
+                <h4>📖 Proyecto de Vida</h4>
+                <p>Trabajado en Dirección de grado</p>
+              </div>
+              <div class="highlight-box">
+                <h4>☮️ Cátedra de la Paz</h4>
+                <p>Transversalidad con Ciencias Sociales</p>
+              </div>
+              <div class="highlight-box">
+                <h4>📚 Plan Lector - PRAE</h4>
+                <p>Proyecto institucional de lectura</p>
+              </div>
+              <div class="highlight-box">
+                <h4>💭 Educación Socioemocional</h4>
+                <p>"Sentir, Pensar, Convivir en el Carbonell"</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sedes -->
+          <div class="card">
+            <h3 class="card-title">Sedes de la Institución</h3>
+            <div class="grid-4">
+              <div class="achievement-item">
+                <div class="achievement-icon">🏫</div>
+                <div class="achievement-text"><strong>Sede 1:</strong> Principal</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">🏫</div>
+                <div class="achievement-text"><strong>Sede 2:</strong> Lomalarga</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">🏫</div>
+                <div class="achievement-text"><strong>Sede 3:</strong> Quinta Cajón</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">🏫</div>
+                <div class="achievement-text"><strong>Sede 4:</strong> Lugo Alto</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Metas PMI Académica -->
+          <div class="card">
+            <h3 class="card-title">Metas PMI - Gestión Académica</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr><th>Meta</th><th>Ejecución</th><th>Observaciones</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Implementación de estrategias de evaluación formativa</td>
+                    <td><span class="badge badge-success">90%</span></td>
+                    <td>Taller práctico sobre evaluación formativa. Seguimiento mediante plataforma.</td>
+                  </tr>
+                  <tr>
+                    <td>Centros de Interés con 4 actividades lúdico-pedagógicas por periodo</td>
+                    <td><span class="badge badge-success">100%</span></td>
+                    <td>Cronograma implementado, socialización en sedes, evidencias en Teams</td>
+                  </tr>
+                  <tr>
+                    <td>Aplicación de tres simulacros Pruebas Saber (3° a 11°)</td>
+                    <td><span class="badge badge-success">90%</span></td>
+                    <td>3 simulacros implementados. Planes de mejoramiento en ejecución.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gestión Comunitaria -->
+      <section id="comunitaria" class="section" style="background: linear-gradient(180deg, rgba(16, 95, 67, 0.2) 0%, rgba(88, 28, 135, 0.2) 100%)">
+        <div class="section-header">
+          <div class="section-icon">👥</div>
+          <h2 class="section-title">GESTIÓN COMUNITARIA</h2>
+          <p class="section-subtitle">Convivencia, participación y desarrollo comunitario</p>
+        </div>
+
+        <div class="content-grid">
+          <!-- Manual de Convivencia -->
+          <div class="card">
+            <h3 class="card-title">Implementación Manual de Convivencia</h3>
+            <div class="grid-2">
+              <div class="list-item">
+                <span class="list-icon">📋</span>
+                <span>Situaciones de Convivencia Escolar atendidas</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">⚖️</span>
+                <span>Medidas implementadas según protocolo</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">🔗</span>
+                <span>Activación de Rutas Externas cuando fue necesario</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">📝</span>
+                <span>Actualización del Manual de Convivencia</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inclusión -->
+          <div class="card">
+            <h3 class="card-title">Inclusión - Atención Educativa</h3>
+            <div class="highlight-box">
+              <h4>🧒 Atención a Estudiantes con Barreras para el Aprendizaje</h4>
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>Identificación y caracterización de <strong>21 estudiantes</strong> con Barreras para el Aprendizaje y la Participación</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>Realización del Plan Individual de Ajustes Razonables (PIAR) de cada estudiante</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>Seguimiento a avances de estudiantes caracterizados</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">✓</span>
+                <span>Acompañamiento familiar permanente</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Escuela de Padres -->
+          <div class="card">
+            <h3 class="card-title">Escuela de Padres 2025</h3>
+            <p style="margin-bottom: 1rem; color: rgba(255, 255, 255, 0.7)">En cumplimiento de Ley 2025 de 2020 y Ley 1098 de 2006</p>
+            <div class="grid-2">
+              <div class="highlight-box">
+                <h4>📚 Temas Trabajados</h4>
+                <div class="list-item"><span class="list-icon">•</span><span>Prevención del abuso sexual</span></div>
+                <div class="list-item"><span class="list-icon">•</span><span>Prevención del suicidio</span></div>
+                <div class="list-item"><span class="list-icon">•</span><span>Manual de Convivencia</span></div>
+                <div class="list-item"><span class="list-icon">•</span><span>Educación integral para la sexualidad</span></div>
+              </div>
+              <div class="achievement-item" style="padding: 2rem">
+                <div class="achievement-icon" style="font-size: 3rem">👨‍👩‍👧‍👦</div>
+                <div class="achievement-text" style="font-size: 1.5rem; font-weight: 700; color: #ffd700">813</div>
+                <div class="achievement-text">Padres participantes</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actividades Culturales -->
+          <div class="card">
+            <h3 class="card-title">Actividades Académicas y Culturales</h3>
+            <div class="grid-2">
+              <div class="highlight-box">
+                <h4>🔢 Olimpiadas de Matemáticas</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 0.5rem">28 de octubre de 2025</p>
+                <div class="list-item"><span class="list-icon">•</span><span><strong>Semillitas:</strong> grados 4° y 5°</span></div>
+                <div class="list-item"><span class="list-icon">•</span><span><strong>Exploradores:</strong> grados 6° y 7°</span></div>
+                <div class="list-item"><span class="list-icon">•</span><span><strong>Aventureros:</strong> grados 8° y 9°</span></div>
+                <div class="list-item"><span class="list-icon">•</span><span><strong>Avanzado:</strong> grados 10° y 11°</span></div>
+              </div>
+              <div class="highlight-box">
+                <h4>📖 Olimpiadas de Lengua Castellana</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 0.5rem">Categorías: 4° a 11°</p>
+                <div class="list-item"><span class="list-icon">•</span><span>Ortografía</span></div>
+                <div class="list-item"><span class="list-icon">•</span><span>Gramática</span></div>
+                <div class="list-item"><span class="list-icon">•</span><span>Comprensión lectora</span></div>
+                <div class="list-item"><span class="list-icon">•</span><span>Redacción</span></div>
+                <div class="list-item"><span class="list-icon">•</span><span>Pensamiento crítico</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semana Cultural -->
+          <div class="card">
+            <h3 class="card-title">Semana Cultural Carbonelina 2025</h3>
+            <div class="highlight-box">
+              <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem">"Fortalecimiento de la Identidad Cultural a través del Folclor Colombiano"</p>
+              <div class="grid-2">
+                <div>
+                  <p style="color: #ffd700; font-weight: 600">📅 25 de octubre</p>
+                  <p>Desfile de Carrozas</p>
+                </div>
+                <div>
+                  <p style="color: #ffd700; font-weight: 600">📅 27-31 de octubre</p>
+                  <p>Veladas Culturales</p>
+                </div>
+              </div>
+              <p style="margin-top: 1rem"><strong>Participación:</strong> IE San José de Tetuán, IE Domingo Savio, Jardín Stard Kids</p>
+            </div>
+          </div>
+
+          <!-- Feria de Emprendimiento -->
+          <div class="card">
+            <h3 class="card-title">Feria de Emprendimiento</h3>
+            <div class="highlight-box">
+              <p style="color: #ffd700; font-weight: 600; font-size: 1.1rem">📅 28 de Octubre de 2025</p>
+              <p style="margin-top: 0.5rem">Evento de exhibición de proyectos emprendedores de los estudiantes</p>
+            </div>
+          </div>
+
+          <!-- Feria de la Sexualidad -->
+          <div class="card">
+            <h3 class="card-title">Feria de la Sexualidad 2025 - Proyecto PESCC</h3>
+            <p style="margin-bottom: 1rem; color: rgba(255, 255, 255, 0.7)">28 y 29 de octubre | Enfoque de derechos y prevención</p>
+            <div class="grid-2">
+              <div class="highlight-box">
+                <h4>🧒 Primaria</h4>
+                <div class="list-item"><span class="list-icon">•</span><span>Cuidado del cuerpo</span></div>
+                <div class="list-item"><span class="list-icon">•</span><span>Prevención del abuso</span></div>
+              </div>
+              <div class="highlight-box">
+                <h4>👨‍🎓 Secundaria</h4>
+                <div class="list-item"><span class="list-icon">•</span><span>Derechos sexuales y reproductivos</span></div>
+                <div class="list-item"><span class="list-icon">•</span><span>ITS</span></div>
+                <div class="list-item"><span class="list-icon">•</span><span>Diversidad</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prevención -->
+          <div class="card">
+            <h3 class="card-title">Actividades de Prevención</h3>
+            <div class="highlight-box">
+              <h4>🚫 Conmemoración Día Internacional contra el Reclutamiento</h4>
+              <p>Actividades de prevención del reclutamiento y uso de NNJA por grupos armados ilegales</p>
+            </div>
+          </div>
+
+          <!-- Metas PMI Comunitaria -->
+          <div class="card">
+            <h3 class="card-title">Metas PMI - Gestión Comunitaria</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr><th>Meta</th><th>Ejecución</th><th>Observaciones</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Participación del 80% de padres en talleres formativos</td>
+                    <td><span class="badge badge-success">100%</span></td>
+                    <td>6 talleres de Escuela de Padres + 2 encuentros con Directores de grado</td>
+                  </tr>
+                  <tr>
+                    <td>6 talleres de Escuela de Padres</td>
+                    <td><span class="badge badge-warning">75%</span></td>
+                    <td>Tasa de asistencia del 60%</td>
+                  </tr>
+                  <tr>
+                    <td>Identificar principales riesgos psicosociales</td>
+                    <td><span class="badge badge-success">100%</span></td>
+                    <td>Encuesta implementada con toda la comunidad</td>
+                  </tr>
+                  <tr>
+                    <td>Plan de trabajo para prevenir daños por factores psicosociales</td>
+                    <td><span class="badge badge-warning">80%</span></td>
+                    <td>Socialización sobre bullying, convivencia, sexualidad, prevención SPA y Vapers</td>
+                  </tr>
+                  <tr>
+                    <td>80% de estudiantes con bosquejo de proyecto de vida</td>
+                    <td><span class="badge badge-warning">70%</span></td>
+                    <td>Esquema grado por grado. Faltó seguimiento</td>
+                  </tr>
+                  <tr>
+                    <td>Conformación de estamentos del Gobierno Escolar</td>
+                    <td><span class="badge badge-success">100%</span></td>
+                    <td>Proceso democrático realizado</td>
+                  </tr>
+                  <tr>
+                    <td>50 estudiantes líderes capacitados en salud mental</td>
+                    <td><span class="badge badge-warning">30%</span></td>
+                    <td>Jóvenes elegidos con pauta inicial. Se requiere mayor empoderamiento</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Conclusiones -->
+          <div class="card">
+            <h3 class="card-title">Conclusiones Generales</h3>
+            <p style="margin-bottom: 1rem; color: rgba(255, 255, 255, 0.8)">Durante la vigencia 2025 se evidenció:</p>
+            <div class="grid-2">
+              <div class="list-item"><span class="list-icon">✓</span><span>Aplicación efectiva del Manual de Convivencia</span></div>
+              <div class="list-item"><span class="list-icon">✓</span><span>Enfoque restaurativo</span></div>
+              <div class="list-item"><span class="list-icon">✓</span><span>Articulación interinstitucional</span></div>
+              <div class="list-item"><span class="list-icon">✓</span><span>Participación familiar</span></div>
+              <div class="list-item"><span class="list-icon">✓</span><span>Desarrollo académico, cultural y preventivo</span></div>
+            </div>
+            <div class="highlight-box" style="margin-top: 1rem">
+              <p style="font-weight: 600">Se consolida una cultura institucional basada en derechos, corresponsabilidad y prevención.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gestión Administrativa y Financiera -->
+      <section id="administrativa" class="section" style="background: linear-gradient(180deg, rgba(88, 28, 135, 0.2) 0%, rgba(20, 83, 45, 0.2) 100%)">
+        <div class="section-header">
+          <div class="section-icon">💰</div>
+          <h2 class="section-title">GESTIÓN ADMINISTRATIVA Y FINANCIERA</h2>
+          <p class="section-subtitle">Recursos, contratación y ejecución presupuestal</p>
+        </div>
+
+        <div class="content-grid">
+          <!-- Ingresos -->
+          <div class="card">
+            <h3 class="card-title">Ingresos 2025 (Enero - Diciembre)</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr><th>Detalle de Ingreso</th><th>Valor</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Concesión de Espacios</td><td class="amount">$ 7,510,205</td></tr>
+                  <tr><td>Certificados y Constancias</td><td class="amount">$ 6,400,700</td></tr>
+                  <tr><td>Calidad por Gratuidad</td><td class="amount">$ 229,543,625</td></tr>
+                  <tr><td>Rendimientos Financieros – SGP Gratuidad</td><td class="amount">$ 2,835,999</td></tr>
+                  <tr><td>Recursos de Balance – Recursos Propios</td><td class="amount">$ 15,473,512</td></tr>
+                  <tr><td>Recursos de Balance – SGP Gratuidad</td><td class="amount">$ 24,256,019</td></tr>
+                  <tr class="total-row"><td><strong>TOTAL INGRESOS</strong></td><td><strong class="amount">$ 286,020,060</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Balance -->
+          <div class="card">
+            <h3 class="card-title">Balance General 2025</h3>
+            <div class="grid-3">
+              <div class="achievement-item" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1))">
+                <div class="achievement-text" style="font-size: 0.9rem; margin-bottom: 0.5rem">Total Ingresos</div>
+                <div class="achievement-text" style="font-size: 1.5rem; font-weight: 700; color: #10b981">$286,020,060</div>
+              </div>
+              <div class="achievement-item" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.1))">
+                <div class="achievement-text" style="font-size: 0.9rem; margin-bottom: 0.5rem">Total Gastos</div>
+                <div class="achievement-text" style="font-size: 1.5rem; font-weight: 700; color: #ef4444">$234,368,503</div>
+              </div>
+              <div class="achievement-item" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1))">
+                <div class="achievement-text" style="font-size: 0.9rem; margin-bottom: 0.5rem">Saldo por Ejecutar</div>
+                <div class="achievement-text" style="font-size: 1.5rem; font-weight: 700; color: #3b82f6">$51,651,557</div>
+              </div>
+            </div>
+            <div style="margin-top: 1.5rem">
+              <h4 style="color: #ffd700; margin-bottom: 1rem">Distribución por Rubro</h4>
+              <div class="grid-3">
+                <div class="highlight-box">
+                  <p style="font-size: 0.9rem">Gratuidad</p>
+                  <p style="font-size: 1.2rem; font-weight: 700; color: #ffd700">$161,791,101</p>
+                </div>
+                <div class="highlight-box">
+                  <p style="font-size: 0.9rem">Formación Integral</p>
+                  <p style="font-size: 1.2rem; font-weight: 700; color: #ffd700">$42,403,568</p>
+                </div>
+                <div class="highlight-box">
+                  <p style="font-size: 0.9rem">Primera Infancia</p>
+                  <p style="font-size: 1.2rem; font-weight: 700; color: #ffd700">$25,348,956</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contratos -->
+          <div class="card">
+            <h3 class="card-title">Contratos 2025</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr><th>#</th><th>Tipo</th><th>Descripción</th><th>Valor</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>Prestación de Servicios</td><td>Apoyo Jurídico - Contratación</td><td class="amount">$ 6,500,000</td></tr>
+                  <tr><td>2</td><td>Prestación de Servicios</td><td>Apoyo Contable</td><td class="amount">$ 6,500,000</td></tr>
+                  <tr><td>3</td><td>Prestación de Servicios</td><td>FPO Software Notas</td><td class="amount">$ 3,200,000</td></tr>
+                  <tr><td>4</td><td>Prestación de Servicios</td><td>Mantenimiento Zonas Verdes</td><td class="amount">$ 7,800,000</td></tr>
+                  <tr><td>5</td><td>Prestación de Servicios</td><td>Abogada Manual Convivencia</td><td class="amount">$ 3,300,000</td></tr>
+                  <tr><td>6</td><td>Prestación de Servicios</td><td>Internet</td><td class="amount">$ 12,337,206</td></tr>
+                  <tr><td>7</td><td>Compraventa</td><td>Póliza</td><td class="amount">$ 2,636,481</td></tr>
+                  <tr><td>8</td><td>Compraventa</td><td>Software Contable</td><td class="amount">$ 1,060,000</td></tr>
+                  <tr><td>9</td><td>Compraventa</td><td>Bienes de Servicio (Aseo, Ferre., Cafetería)</td><td class="amount">$ 21,179,800</td></tr>
+                  <tr><td>10</td><td>Compraventa</td><td>Equipos Tecnológicos y Mobiliario</td><td class="amount">$ 28,175,154</td></tr>
+                  <tr><td>11</td><td>Compraventa</td><td>Papelería</td><td class="amount">$ 21,405,000</td></tr>
+                  <tr><td>12</td><td>Compraventa</td><td>Circuito Privado - Cámaras</td><td class="amount">$ 14,677,656</td></tr>
+                  <tr><td>13</td><td>Compraventa</td><td>Papelería y Reconocimientos Educativos</td><td class="amount">$ 9,970,950</td></tr>
+                  <tr><td>14</td><td>Compraventa</td><td>Artículos Deportivos, Típicos, Instr. Musicales</td><td class="amount">$ 42,403,568</td></tr>
+                  <tr><td>15</td><td>Compraventa</td><td>Mobiliario Primera Infancia</td><td class="amount">$ 22,083,880</td></tr>
+                  <tr><td>16</td><td>Compraventa</td><td>Kit de Grado</td><td class="amount">$ 7,206,640</td></tr>
+                  <tr><td>17</td><td>Obra</td><td>Obra Primera Infancia</td><td class="amount">$ 3,259,678</td></tr>
+                  <tr><td>18</td><td>Compraventa</td><td>Papelería y Camilla</td><td class="amount">$ 10,843,500</td></tr>
+                  <tr class="total-row"><td colSpan={3}><strong>TOTAL CONTRATACIÓN</strong></td><td><strong class="amount">$ 224,539,513</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Acuerdos de Préstamo -->
+          <div class="card">
+            <h3 class="card-title">Acuerdos de Préstamo de Uso</h3>
+            <p style="margin-bottom: 1rem; color: rgba(255, 255, 255, 0.7)">Acuerdo 7 mayo 22 de 2024</p>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr><th>Beneficiario</th><th>Espacio Asignado</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>José Reinel Telles</td><td>Piscina</td></tr>
+                  <tr><td>Gabriel Campos</td><td>Aula Máxima Rafael Rocha</td></tr>
+                  <tr><td>Asocultupaz</td><td>Salón primera planta sala informática</td></tr>
+                  <tr><td>Neyi Lorena Ramírez (StarKids)</td><td>Aula múltiple - Jesús María Hernández</td></tr>
+                  <tr><td>Oscar Sanclemente</td><td>Salón - Jesús María Hernández</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Recursos -->
+          <div class="card">
+            <h3 class="card-title">Recursos Institucionales</h3>
+            <div class="grid-2">
+              <div class="highlight-box">
+                <h4>👥 Recursos Humanos</h4>
+                <p>Planta docente y administrativa completa</p>
+              </div>
+              <div class="highlight-box">
+                <h4>🏗️ Infraestructura</h4>
+                <p>Mesas comedor Rafael Rocha, adecuación bodega</p>
+              </div>
+              <div class="highlight-box">
+                <h4>💻 Tecnología</h4>
+                <p>Recuperación de portátiles institucionales</p>
+              </div>
+              <div class="highlight-box">
+                <h4>🚌 Transporte Escolar</h4>
+                <p>Programa implementado para estudiantes</p>
+              </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 1rem">
+              <h4>🍽️ PAE (Programa de Alimentación Escolar)</h4>
+              <p>Modalidad Mayoritario e Indígena</p>
+            </div>
+          </div>
+
+          <!-- Metas PMI Administrativa -->
+          <div class="card">
+            <h3 class="card-title">Metas PMI - Gestión Administrativa</h3>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr><th>Meta</th><th>Ejecución</th><th>Observaciones</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Matricular 90% de estudiantes para vigencia 2026</td>
+                    <td><span class="badge badge-success">90%</span></td>
+                    <td>Difusión realizada, prematrícula completada</td>
+                  </tr>
+                  <tr>
+                    <td>Jornadas de aseo, mantenimiento y embellecimiento en todas las sedes</td>
+                    <td><span class="badge badge-success">100%</span></td>
+                    <td>Jornadas según cronograma con participación de docentes y padres</td>
+                  </tr>
+                  <tr>
+                    <td>Seguimiento periódico a jornadas de aseo con evidencia en plataforma</td>
+                    <td><span class="badge badge-success">100%</span></td>
+                    <td>Evidencias subidas a plataforma cada periodo</td>
+                  </tr>
+                  <tr>
+                    <td>Formato de requerimiento de necesidades por sedes, proyectos y áreas</td>
+                    <td><span class="badge badge-success">100%</span></td>
+                    <td>Docentes y jefes de área presentaron requerimientos en Teams</td>
+                  </tr>
+                  <tr>
+                    <td>Seguimiento a entrega de materiales solicitados</td>
+                    <td><span class="badge badge-warning">80%</span></td>
+                    <td>Priorización de necesidades, entrega según posibilidades financieras</td>
+                  </tr>
+                  <tr>
+                    <td>Gestión de capacitaciones para personal de la IE</td>
+                    <td><span class="badge badge-success">100%</span></td>
+                    <td>Gestión ante entes municipales y departamentales</td>
+                  </tr>
+                  <tr>
+                    <td>Disminuir tasa de deserción escolar</td>
+                    <td><span class="badge badge-success">90%</span></td>
+                    <td>Seguimiento constante a asistencia y desempeño</td>
+                  </tr>
+                  <tr>
+                    <td>Cronograma de formación autónoma institucional</td>
+                    <td><span class="badge badge-warning">50%</span></td>
+                    <td>Temáticas identificadas, no implementado por falta de tiempo</td>
+                  </tr>
+                  <tr>
+                    <td>Jornada de exaltación de fortalezas de docentes</td>
+                    <td><span class="badge badge-success">100%</span></td>
+                    <td>Día del Maestro (mayo) y Semana Institucional (diciembre)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dificultades y Proyección -->
+      <section id="dificultades" class="section" style="background: linear-gradient(180deg, rgba(20, 83, 45, 0.2) 0%, rgba(127, 29, 26, 0.2) 100%)">
+        <div class="content-grid">
+          <!-- Dificultades -->
+          <div class="card">
+            <h3 class="card-title">⚠️ Dificultades Identificadas</h3>
+            <div class="grid-2">
+              <div class="list-item">
+                <span class="list-icon">💸</span>
+                <span>Escasez de recursos económicos para necesidades cotidianas de la institución</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">💻</span>
+                <span>Falta de infraestructura tecnológica y conectividad en todas las sedes</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">🏗️</span>
+                <span>Deterioro de la infraestructura física en la gran mayoría de sedes</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">⚠️</span>
+                <span>Factores de riesgo: mal uso de redes sociales, familias disfuncionales, consumo de SPA, alcohol, mal manejo de emociones</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">👨‍🏫</span>
+                <span>Demora en asignación de docentes por parte de la Gobernación del Tolima</span>
+              </div>
+              <div class="list-item">
+                <span class="list-icon">🤝</span>
+                <span>Problemas de convivencia escolar y situaciones de indisciplina</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyección -->
+          <div class="card" id="proyeccion">
+            <h3 class="card-title">🎯 Proyección Estratégica 2026</h3>
+            <div class="grid-2">
+              <div class="achievement-item">
+                <div class="achievement-icon">🏗️</div>
+                <div class="achievement-text">Mejoramiento progresivo de infraestructura de las sedes</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">🤝</div>
+                <div class="achievement-text">Fortalecimiento de convivencia escolar</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">📊</div>
+                <div class="achievement-text">Mayor seguimiento a metas del PMI</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">📶</div>
+                <div class="achievement-text">Mejoramiento de la conectividad de la sede principal y aulas</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">📱</div>
+                <div class="achievement-text">Mayor visibilidad de la institución en medios digitales</div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">👨‍👩‍👧‍👦</div>
+                <div class="achievement-text">Mayor participación de padres, madres y acudientes</div>
+              </div>
+              <div class="achievement-item" style="grid-column: span 2">
+                <div class="achievement-icon">👥</div>
+                <div class="achievement-text">Fortalecer participación del Consejo de Estudiantes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-logo">IE José María Carbonell</div>
+        <p class="footer-text">Rendición de Cuentas 2025</p>
+        <p class="footer-text">Rector: César Augusto Estrada Herrera</p>
+        <p class="footer-text">San Antonio, Tolima - Colombia</p>
+        <p style="margin-top: 2rem; font-size: 1rem; color: rgba(255, 255, 255, 0.4)">
+          © 2025 - Todos los derechos reservados
+        </p>
+      </footer>
+
+      <!-- Botón de Imprimir/Descargar PDF -->
+      <div class="print-button-container">
+        <button class="print-button" onclick="window.print()">
+          <span class="print-button-icon">🖨️</span>
+          <span>Imprimir / Guardar PDF</span>
+        </button>
+      </div>
+    
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = ['portada', 'directiva', 'academica', 'comunitaria', 'administrativa'];
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const sectionId = this.getAttribute('data-section');
+            if (sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+    
+    function updateActiveLink() {
+        const scrollPosition = window.scrollY + 150;
+        for (const sectionId of sections) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                if (scrollPosition >= top && scrollPosition < top + height) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    const activeLink = document.querySelector('.nav-link[data-section="' + sectionId + '"]');
+                    if (activeLink) activeLink.classList.add('active');
+                    break;
+                }
+            }
+        }
+    }
+    
+    window.addEventListener('scroll', updateActiveLink);
+    updateActiveLink();
+});
+</script>
+
+</body>
+</html>
